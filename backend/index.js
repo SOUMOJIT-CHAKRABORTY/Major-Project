@@ -1,10 +1,34 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const { mongoose } = require("mongoose");
+const multer = require("multer");
+const dotenv = require("dotenv");
 
-app.get("/", (req, res) => {
-  res.send("Hello Node");
+const UserRoute = require("./routes/userRoutes");
+dotenv.config();
+
+app.use(express.json());
+app.use(cors());
+
+const Database = process.env.DATABASE_URI;
+
+mongoose
+  .connect(Database, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("Database connected"))
+  .catch((err) => console.log("not connected", err));
+
+// app.use("/admin", AdminRoute);
+app.use("/users", UserRoute);
+
+app.all("*", (req, res) => {
+  res.status(404).json({
+    status: "fail",
+    message: `Can't find ${req.originalUrl} on this server! `,
+  });
 });
 
-app.listen("3000", () => {
-  console.log("Running on port 3000");
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
 });
