@@ -52,3 +52,8 @@ exports.loginUser = async (req, res) => {
     res.status(403).json({ message: "Invalid username or password" });
   }
 };
+
+exports.getUsers = async (req, res) => {
+  const users = await User.find({});
+  res.json(users);
+};
