@@ -21,15 +21,15 @@ exports.authenticateUser = (req, res, next) => {
 };
 
 exports.signupUser = async (req, res) => {
-  const { username, password } = req.body;
+  const { firstname, lastname, age, email, password } = req.body;
   try {
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
     if (user) {
       return res.status(403).json({ message: "User already exists" });
     } else {
-      const newUser = new User({ username, password });
+      const newUser = new User({ firstname, lastname, age, email, password });
       await newUser.save();
-      const token = jwt.sign({ username, role: "user" }, UserSecret, {
+      const token = jwt.sign({ email, role: "user" }, UserSecret, {
         expiresIn: "1h",
       });
       return res.json({ message: "User created successfully", token });
@@ -41,10 +41,10 @@ exports.signupUser = async (req, res) => {
 };
 
 exports.loginUser = async (req, res) => {
-  const { username, password } = req.body;
-  const user = await User.findOne({ username, password });
+  const { email, password } = req.body;
+  const user = await User.findOne({ email, password });
   if (user) {
-    const token = jwt.sign({ username, role: "user" }, UserSecret, {
+    const token = jwt.sign({ email }, UserSecret, {
       expiresIn: "1h",
     });
     res.json({ message: "Logged in successfully", token });
