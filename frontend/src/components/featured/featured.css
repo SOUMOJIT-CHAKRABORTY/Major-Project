@@ -24,3 +24,12 @@
     position: absolute;
     bottom: 10px;
 }
+
+.featuredItem1{
+    position: relative;
+    color: rgb(254, 254, 254);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+    width: 25%;
+}
