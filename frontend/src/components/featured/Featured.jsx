@@ -8,8 +8,7 @@ const Featured = () => {
             alt="" className="featuredImage" />
         <div className="featuredTitle">
             <h1>Taj Mahal</h1>
-            <h2>123 properties</h2>
-        </div>
+           </div>
         </div>
 
         <div className="featuredItem">
@@ -17,18 +16,26 @@ const Featured = () => {
             alt="" className="featuredImage" />
         <div className="featuredTitle">
             <h1>Goa</h1>
-            <h2>523 properties</h2>
+
         </div>
         </div>
 
-        <div className="featuredItem">
-            <img src="https://cf.bstatic.com/xdata/images/region/square250/68522.webp?k=a53c0fffc2f8d8c1ec72144fdb934d5e2bc5cf8c324467bce89c4f3bae22c181&o=" 
+        <div className="featuredItem1">
+            <img src="https://static.javatpoint.com/tourist-places/images/tourist-places-in-west-bengal1.png" 
             alt="" className="featuredImage" />
         <div className="featuredTitle">
-            <h1>Kerala</h1>
-            <h2>533 properties</h2>
+            <h1>Kolkata</h1>
+        
         </div>
         </div>
+        <div className="featuredItem">
+            <img src="https://cf.bstatic.com/xdata/images/city/square250/971346.webp?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&o=" 
+            alt="" className="featuredImage" />
+        <div className="featuredTitle">
+            <h1>Mumbai</h1>
+           </div>
+        </div>
+
     </div>
   )
 }

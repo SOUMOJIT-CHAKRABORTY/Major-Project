@@ -1,6 +1,6 @@
 .navbar{
     height: 40px;
-    background-color: rgb(7, 7, 169);
+    background-color:rgb(23, 23, 23);
     display: flex;
     justify-content: center;
 }
@@ -16,13 +16,22 @@
 
 .logo{
     font-weight: 500;
+    cursor: pointer;
 }
 
-.navButtton{
+.button{
+color:white;
+padding: 20px 0px;
+
+}
+
+.navButton{
     margin-left: 40px;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    color: blue;
+    color: #d8455d;
 }
+
+
 
