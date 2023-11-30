@@ -6,6 +6,7 @@ const multer = require("multer");
 const dotenv = require("dotenv");
 
 const UserRoute = require("./routes/userRoutes");
+const TrainRoute = require("./routes/trainRouters");
 dotenv.config();
 
 app.use(express.json());
@@ -20,6 +21,7 @@ mongoose
 
 // app.use("/admin", AdminRoute);
 app.use("/users", UserRoute);
+app.use("/trains", TrainRoute);
 
 app.all("*", (req, res) => {
   res.status(404).json({
