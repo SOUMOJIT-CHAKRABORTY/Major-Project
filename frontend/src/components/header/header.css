@@ -1,138 +1,135 @@
-.header{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.redbus.in/railways/public/images/main-background.png);
-    color:white;
-   /* display: flex;
+.header {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://www.redbus.in/railways/public/images/main-background.png);
+  color: white;
+  /* display: flex;
     justify-content: flex-start;
     position: relative;
     height: 25%;*/
-    flex-direction: column;
-    justify-content: flex start;
-    align-items: center;
-    padding: 3rem 9.75rem;
-    height: 25%;
-    background-repeat: no-repeat!important;
-    background-size:cover;
-    position: relative;
-
+  flex-direction: column;
+  justify-content: flex start;
+  align-items: center;
+  padding: 3rem 9.75rem;
+  height: 25%;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+  position: relative;
 }
 
-.headerContainer{
-    width: 100%;
-    max-width: 1024px;
-    margin: 20px 0px 100px 0px;
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 0px 100px 0px;
 }
 
-.headerContainer.listMode{
-    margin: 20px 0px 50px 0px;
+.headerContainer.listMode {
+  margin: 20px 0px 50px 0px;
 }
-.headerList{
-    display:flex;
-    gap: 10px;
-
-}
-
-.headerListItem{
-    display:flex;
-    align-items: center;
-    gap: 20px;
+.headerList {
+  display: flex;
+  gap: 10px;
 }
 
-.headerListItem.active{
-    border:1px solid white;
-    padding: 10px;
-    border-radius: 20px;
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.headerDesc{
-    margin: 20px 0px;
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-.headerBtn{
-    background-color:#D84E55;
-    color:rgb(245, 242, 242);
-    font-weight: 500;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.headerDesc {
+  margin: 20px 0px;
 }
 
-.headerSearch{
-    height: 30px;
-    background-color: rgb(241, 248, 248);
-    border: 3px solid rgb(249, 250, 250);
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    padding: 15px 70px;
-    border-radius: 5px;
-    position: relative;
-    bottom:-55px;
-    width:70%;
-    margin-left: 30%;
-    margin-top: 20%;
-
+.headerBtn {
+  background-color: #d84e55;
+  color: rgb(245, 242, 242);
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.headerIcon{
-    color:lightcoral;
+.headerSearch {
+  height: 30px;
+  background-color: rgb(241, 248, 248);
+  border: 3px solid rgb(249, 250, 250);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 70px;
+  border-radius: 5px;
+  position: relative;
+  bottom: -55px;
+  width: 70%;
+  margin-left: 30%;
+  margin-top: 20%;
 }
 
-.headerSearchItem{
-    display: flex;
-    align-items: center;
-    gap:10px;
+.headerIcon {
+  color: lightcoral;
 }
 
-.headerSearchInput{
-    border:none;
-    outline: none;
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.headerSearchText{
-    color: lightgray;
-    cursor: pointer;
-
+.headerSearchInput {
+  border: none;
+  outline: none;
 }
 
-.date{
-    position: absolute;
-    top: 50px;
-    z-index: 2;
-}
-.options{
-    z-index: 2;
-    position:absolute;
-    top: 50px;
-    background-color: white;
-    color: rgb(8, 8, 8);
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px -5px rgb(0, 0, 0,4);
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
 }
 
-.optionItem{
-    width:200px;
-    display: flex;
-    justify-content:space-between;
-    margin: 10px;
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: rgb(8, 8, 8);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgb(0, 0, 0, 4);
 }
 
-.optionCounter{
-    display: flex;
-    align-items: center;
-    gap:10px;
-    font-size: 12px;
-    color: black;
+.optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }
 
-.optionCounterButton{
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgb(13, 6, 156);
-    color:rgb(35, 11, 193);
-    cursor: pointer;
-    background-color: white;
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
 }
 
-.optionCounterButton:disabled{
-    cursor: not-allowed;
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(13, 6, 156);
+  color: rgb(35, 11, 193);
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
 }
